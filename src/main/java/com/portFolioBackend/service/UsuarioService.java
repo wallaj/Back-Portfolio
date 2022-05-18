@@ -5,11 +5,13 @@ import com.portFolioBackend.model.Usuario;
 import com.portFolioBackend.repository.UsuarioRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Marcos
  */
+@Service
 public class UsuarioService  implements IUsuarioService{
 
     @Autowired 
