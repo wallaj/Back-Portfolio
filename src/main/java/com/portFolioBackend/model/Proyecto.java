@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,9 @@ public class Proyecto {
     private Integer id;
     private String descripcion;
     private String año;
+    
+    @ManyToOne
+    private Usuario userId;
 
     public Proyecto() {
     }

@@ -5,8 +5,9 @@ import com.portFolioBackend.model.ExperienciaLab;
 import com.portFolioBackend.repository.ExperienciaLabRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ExperienciaLabService implements IExperienciaLabService {
     
     @Autowired
@@ -30,6 +31,11 @@ public class ExperienciaLabService implements IExperienciaLabService {
     @Override
     public void mostrarExperienciaLab(Integer id) {
         expLabRepo.findById(id);
+    }
+
+    @Override
+    public void actualizarExperienciaLab(ExperienciaLab expLab) {
+        expLabRepo.save(expLab);
     }
     
 }

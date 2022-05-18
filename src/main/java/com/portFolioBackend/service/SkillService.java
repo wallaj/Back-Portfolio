@@ -5,12 +5,14 @@ import com.portFolioBackend.model.Skill;
 import com.portFolioBackend.repository.SkillRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Marcos
  */
 
+@Service
 public class SkillService implements ISkillService{
     
     @Autowired
@@ -35,5 +37,11 @@ public class SkillService implements ISkillService{
     public Skill buscarSkill(Integer id) {
         return skillRepo.findById(id).orElse(null);
     }
+
+    @Override
+    public void actualizarSkill(Skill sk) {
+        skillRepo.save(sk);
+    }
+    
     
 }

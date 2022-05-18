@@ -13,4 +13,5 @@ public interface ISkillService {
     public void crearSkill(Skill sk);
     public void borrarSkill(Integer id);
     public Skill buscarSkill(Integer id);
+    public void actualizarSkill(Skill sk);
 }

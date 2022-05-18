@@ -10,4 +10,5 @@ public interface IEstudioService {
     public void crearEstudio(Estudio est);
     public void borrarEstudio(Integer id);
     public Estudio buscarEstudio(Integer id);
+    public void actualizarEstudio(Estudio est);
 }

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,9 @@ public class Estudio {
     private String lugar;
     private String curso;
     private String tipo;
+    
+    @ManyToOne
+    private Usuario userId;
 
     public Estudio() {
     }

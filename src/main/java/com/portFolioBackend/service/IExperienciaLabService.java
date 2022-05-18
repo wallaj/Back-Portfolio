@@ -10,4 +10,5 @@ public interface IExperienciaLabService {
     public void crearExperienciaLab(ExperienciaLab expLab);
     public void borrarExperienciaLab(Integer id);
     public void mostrarExperienciaLab(Integer id);
+    public void actualizarExperienciaLab(ExperienciaLab expLab);
 }
