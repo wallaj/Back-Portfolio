@@ -17,7 +17,7 @@ import lombok.Setter;
  */
 @Getter @Setter
 @Entity
-public class Usuario {
+public class Usuario{
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
@@ -33,8 +33,9 @@ public class Usuario {
     private List<ExperienciaLab> experienciasLab;
     @OneToMany(mappedBy ="userId")
     private List<Skill>skills;
-    
-    
+
+    public Usuario() {
+    }
 
     public Usuario(Integer id, String mail, String password) {
         this.id = id;
