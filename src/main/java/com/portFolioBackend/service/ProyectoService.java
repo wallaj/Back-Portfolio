@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.service;
 
-import com.portFolioBackend.model.Proyecto;
+import com.portFolioBackend.entity.Proyecto;
 import com.portFolioBackend.repository.ProyectoRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

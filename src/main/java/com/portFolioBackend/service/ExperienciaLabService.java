@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.service;
 
-import com.portFolioBackend.model.ExperienciaLab;
+import com.portFolioBackend.entity.ExperienciaLab;
 import com.portFolioBackend.repository.ExperienciaLabRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class ExperienciaLabService implements IExperienciaLabService {
 
     @Override
     public void mostrarExperienciaLab(Integer id) {
-        expLabRepo.findById(id);
+        expLabRepo.findById(id).orElse(null);
     }
 
     @Override

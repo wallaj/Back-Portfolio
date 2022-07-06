@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.service;
 
-import com.portFolioBackend.model.Proyecto;
+import com.portFolioBackend.entity.Proyecto;
 import java.util.List;
 
 /**

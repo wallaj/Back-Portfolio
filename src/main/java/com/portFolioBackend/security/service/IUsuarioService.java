@@ -1,8 +1,9 @@
 
-package com.portFolioBackend.service;
+package com.portFolioBackend.security.service;
 
-import com.portFolioBackend.model.Usuario;
+import com.portFolioBackend.security.entity.Usuario;
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -14,4 +15,6 @@ public interface IUsuarioService {
     public void borrarUsuario(Integer id);
     public Usuario buscarUsuario(Integer id);
     public void actualizarUsuario(Usuario user);
+    public Optional<Usuario> getByMail(String email);
+    public boolean existsByEmail(String email);
 }

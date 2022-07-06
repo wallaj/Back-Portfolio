@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.repository;
 
-import com.portFolioBackend.model.Estudio;
+import com.portFolioBackend.entity.Estudio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

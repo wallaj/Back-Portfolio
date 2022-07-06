@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.service;
 
-import com.portFolioBackend.model.ExperienciaLab;
+import com.portFolioBackend.entity.ExperienciaLab;
 import java.util.List;
 
 

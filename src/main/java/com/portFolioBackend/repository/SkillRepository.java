@@ -1,7 +1,7 @@
 
 package com.portFolioBackend.repository;
 
-import com.portFolioBackend.model.Skill;
+import com.portFolioBackend.entity.Skill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
