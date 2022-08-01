@@ -3,6 +3,7 @@ package com.portFolioBackend.entity;
 
 import com.portFolioBackend.security.entity.Usuario;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,19 +21,21 @@ public class Skill {
     private String nombre;
     private String tipo;
     private Integer nivel;
+    private String path;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(nullable = false, name = "userId")
     private Usuario user;
 
     public Skill() {
     }
 
-    public Skill(Integer id, String nombre, String tipo, Integer nivel) {
+    public Skill(Integer id, String nombre, String tipo, Integer nivel, String path) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
         this.nivel = nivel;
+        this.path = path;
     }
     
     

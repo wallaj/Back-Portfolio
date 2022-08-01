@@ -36,7 +36,7 @@ public class ProyectoController {
         return new ResponseEntity<>("Proyecto Creado",HttpStatus.CREATED);
     }
     
-    @GetMapping("/user/ver/proyectos") 
+    @GetMapping("/ver/proyectos") 
     @ResponseBody
     public ResponseEntity<List<Proyecto>> verProyectos(){
         return new ResponseEntity<>(proyectoServ.verProyectos(), HttpStatus.OK);

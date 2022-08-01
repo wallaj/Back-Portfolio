@@ -18,7 +18,7 @@ public class Proyecto {
     private String anio;
     private String urlFoto;
     
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(nullable = false, name = "userId")
     private Usuario user;
 

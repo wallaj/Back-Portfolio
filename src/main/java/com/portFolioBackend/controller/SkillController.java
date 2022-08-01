@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Marcos
  */
 @RestController
+@RequestMapping("/auth")
 @CrossOrigin(origins = "http://localhost:4200")
 public class SkillController {
     @Autowired
@@ -34,7 +35,7 @@ public class SkillController {
         return new ResponseEntity<>("Skill Creada",HttpStatus.CREATED);
     }
     
-    @GetMapping("/ver/skill") 
+    @GetMapping("/ver/skills") 
     @ResponseBody
     public ResponseEntity<List<Skill>> verSkills(){
         return new ResponseEntity<>(skillServ.verSkills(),HttpStatus.OK);

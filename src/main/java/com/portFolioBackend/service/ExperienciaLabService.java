@@ -29,8 +29,8 @@ public class ExperienciaLabService implements IExperienciaLabService {
     }
 
     @Override
-    public void mostrarExperienciaLab(Integer id) {
-        expLabRepo.findById(id).orElse(null);
+    public ExperienciaLab mostrarExperienciaLab(Integer id) {
+        return expLabRepo.findById(id).orElse(null);
     }
 
     @Override

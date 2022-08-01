@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@RequestMapping("/auth")
 @CrossOrigin(origins = "http://localhost:4200")
 public class EstudioController {
     
@@ -37,6 +38,10 @@ public class EstudioController {
     @ResponseBody
     public ResponseEntity<List<Estudio>> verEstudios(){
         return new ResponseEntity<>(estudioServ.verEstudios(),HttpStatus.OK);
+    }
+    @GetMapping("/ver/estudio/{id}")
+    public ResponseEntity<Estudio> mostrarEstudio(@PathVariable Integer id){
+        return new ResponseEntity<>(estudioServ.buscarEstudio(id), HttpStatus.OK);
     }
     
     @DeleteMapping("/user/delete/estudio/{id}")

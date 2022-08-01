@@ -19,7 +19,7 @@ public class ExperienciaLab {
     private String salida;
     private String descripcion;
     
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(nullable = false, name = "userId")
     private Usuario user;
 
